@@ -1,0 +1,71 @@
+.work-container {
+
+}
+
+.right-arrow, .left-arrow {
+  height: 25px;
+  width: 45px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.left-arrow {
+  margin-right: 74px;
+}
+
+.project-info {
+  display: flex;
+}
+
+.project-name-container {
+  flex-grow: 2;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.project-desc {
+  flex-grow: 2;
+  height: 50vh;
+}
+
+.project-gifs {
+  height: 50vh;
+
+}
+
+/* .slide {
+  width: 100vw;
+} */
+
+.name-1, .name-2 {
+  font-size: 56px;
+  margin-right: 20px;
+}
+
+.pink-scheme-title-bg-color {
+  background-color: #B62058;
+}
+
+.pink-scheme-info-bg-color {
+  color: #B62058;
+}
+
+.pink-scheme-info-bg-color {
+  background-color: #E5E5E5;
+}
+
+.pink-scheme-subtitle-bg-color {
+  background-color: #F7B5B9;
+}
+
+.pink-scheme-title-color {
+  /* color: #F7B5B9; */
+   -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #F7B5B9;
+  -webkit-text-fill-color: transparent;
+}

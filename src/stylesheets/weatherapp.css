@@ -1,0 +1,6 @@
+@import url('./home.css');
+@import url('./accessgram.css');
+
+#weather-description {
+  font-size: 17px !important;
+}

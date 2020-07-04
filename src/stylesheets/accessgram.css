@@ -1,0 +1,60 @@
+@import url('./home.css');
+
+@font-face {
+  font-family: 'Caslon';
+  src: url('../fonts/Caslon.ttf');
+}
+
+#holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.description {
+  font-family: 'Caslon';
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: justify;
+}
+
+img {
+  width: 500px;
+  height: 350px;
+}
+
+.wireframes {
+  margin-top: 120px;
+  text-align: center;
+  align-self: center;
+  grid-template-columns: 600px 600px ;
+}
+
+.wireframes, .info {
+  display: grid;
+}
+
+.info {
+  grid-template-columns: 500px 200px ;
+  grid-column-gap: 30px;
+  height: 370px;
+  text-align: center;
+  align-self: center;
+  padding-top: 40px
+}
+
+.stack-header {
+  font: bolder 25px 'Marzo';
+}
+
+.stack-properties {
+  font: bold 19px 'Marzo';
+  letter-spacing: 1px;
+}
+
+.project-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

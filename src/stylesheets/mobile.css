@@ -1,0 +1,295 @@
+@import url('./home.css');
+@import url('./accessgram.css');
+@import url('./leef.css');
+@import url('./weatherapp.css');
+@import url('./heatmap.css');
+
+
+
+@media (max-width: 750px) {
+  html, body {
+    height: 667px;
+    width: 370px;
+    margin: 0px;
+    padding: 0px;
+    /* overflow-x: hidden; */
+  }
+
+  nav {
+    width: 375px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 400px; */
+
+  }
+
+  .sidnav {
+    font-family: 'Marzo';
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+  .nav-wrapper {
+    display: none;
+  }
+
+  .dropdown-trigger {
+    text-align: left !important;
+  }
+
+  .mobile-nav-title {
+    display: initial;
+    text-align: center;
+    font-family: 'Marzo';
+    font-size: 18px;
+    color: white;
+    letter-spacing: 1px;
+    width: 81px;
+  }
+
+  .divider {
+    background-color: #BBDEDB;
+  }
+
+  .sidenav-trigger {
+    display: inherit;
+  }
+
+  #home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 375px;
+
+  }
+  .projects,  #tech-stack {
+    display: flex;
+  }
+
+  .heading {
+    font-size: 25px;
+    width: 340px;
+    align-self: center;
+
+  }
+
+  .down-arrow {
+    height: 40px;
+    width: 40px;
+  }
+
+  .headshot {
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 100px;
+  }
+
+  .bio {
+    position: relative;
+    margin: 0 auto;
+    width: 340px;
+    padding-top: 20px;
+  }
+
+  #blurb {
+    font-size: 20px;
+    font-weight: lighter;
+  }
+  h3 {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    padding: 0px;
+    font-size: 27px;
+  }
+
+  #stack-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 340px;
+  }
+  #tech-title {
+    order: 1;
+  }
+  #tech-stack > div{
+    align-self: auto;
+
+  }
+
+  #tech-stack {
+    order: 2;
+    border: none !important;
+    margin: 0 auto;
+    height: 100px;
+    width: 300px;
+    padding-top: 170px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  #ruby {
+    order: 1;
+  }
+
+  #rails {
+    order: 2;
+  }
+
+  #computer {
+    order: 3;
+  }
+
+  #frontend {
+    order: 4;
+  }
+
+  #database {
+    order: 5
+  }
+
+  #backend {
+    order: 6
+  }
+
+
+  .stack-child {
+    border-right: none;
+  }
+
+  .stack-img {
+    height: 40px;
+    width: 40px;
+  }
+
+
+  #projects-h3, .projects {
+    padding-top: 150px;
+  }
+
+  #projects-h3 {
+    width: 200px;
+  }
+
+  .projects, #tech-stack {
+    /* margin-left: 0; */
+    flex-direction: column;
+  }
+
+  .projects {
+    width: 350px;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .homegif, .project-gif {
+    height: 0%;
+    width: 0%;
+  }
+  #particles-js {
+    height: 0%;
+    width: 0%;
+  }
+
+  .project-title.wa {
+    margin-top: -43px;
+  }
+
+  .page-footer {
+    height: 115px !important;
+    text-align: center;
+    width: 375px;
+  }
+
+  .wireframes, .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .info {
+    margin-top: 220px;
+    width: 340px;
+    order: 1;
+  }
+
+  .wireframes {
+    order: 2;
+    padding-top: 100px;
+  }
+
+  .project-stack {
+    display: block;
+
+  }
+
+  .stack-header, .stack-properties {
+    font-size: 20px;
+  }
+
+  .stack-properties {
+    margin: 25px;
+  }
+
+  .ui {
+    width: 350px;
+    height: 200px;
+  }
+
+  #siren-icon, #text-message, #balance-icon, #map {
+    padding: 5px;
+  }
+
+  #twilio {
+    height: 350px;
+  }
+
+  #siren-icon {
+    order: 1;
+  }
+  #text-message {
+    order: 2;
+  }
+  #balance-icon {
+    order: 3;
+  }
+  #map {
+    order: 4;
+  }
+
+  .wireframes.leef {
+    padding-top: 135px;
+  }
+
+  .wireframes.wa {
+    padding-top: 190px;
+  }
+
+  .description.wa {
+    margin-top: 70px;
+  }
+
+  .description.map {
+    margin-top: -50px;
+  }
+
+  .description.ag {
+    margin-top: -20px;
+  }
+
+  .project-stack.map {
+    margin-top: 10px;
+  }
+
+
+
+
+}

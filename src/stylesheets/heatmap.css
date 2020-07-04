@@ -1,0 +1,17 @@
+@import url('./home.css');
+@import url('./accessgram.css');
+
+#twilio {
+  width: 200px !important;
+}
+
+.icon {
+  height: 60px;
+  width: 60px;
+}
+
+.map-blurb {
+  font-family: 'Caslon';
+  align-self: center;
+  font-size: 20px;
+}
