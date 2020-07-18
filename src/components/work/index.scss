@@ -1,0 +1,172 @@
+$light-blue: #07b5ea;
+$dark-pink: #b62058;
+$light-green: #05ce78;
+
+.right-arrow,
+.left-arrow {
+  height: 25px;
+  width: 45px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.left-arrow {
+  margin-right: 74px;
+}
+
+.project-info {
+  display: flex;
+}
+
+.project-name-container {
+  flex-grow: 2;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.title-shape {
+  position: absolute;
+  height: 100%;
+  width: 200px;
+  z-index: 2;
+  animation: spin 30s linear infinite;
+}
+
+.project-desc {
+  flex-grow: 2;
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  position: relative;
+}
+
+.project-desc-tech-container {
+  display: flex;
+  background-color: #ffffff;
+  justify-content: space-between;
+}
+
+.project-desc-item {
+  display: flex;
+  align-items: center;
+}
+
+.tech {
+  font-weight: 600;
+  font-size: 15px;
+  padding: 40px;
+}
+
+.desc {
+  padding: 40px;
+  height: 75%;
+  font-size: 15px;
+}
+
+.project-gifs {
+  /* height: 50vh; */
+  display: flex;
+  flex-direction: column;
+}
+
+/* .slide {
+  width: 100vw;
+} */
+
+.name-1,
+.name-2 {
+  position: relative;
+  font-size: 96px;
+  margin-right: 20px;
+}
+
+.name-1 {
+  z-index: 3;
+}
+
+.name-2 {
+  z-index: 1;
+}
+
+.pink-scheme-title-bg-color {
+  background-color: $dark-pink;
+}
+
+.pink-scheme-info-bg-color {
+  color: $dark-pink;
+}
+
+.pink-scheme-info-bg-color {
+  background-color: #e5e5e5;
+}
+
+.pink-scheme-subtitle-bg-color {
+  background-color: #f7b5b9;
+}
+
+.pink-scheme-title-color {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #edafb2;
+  -webkit-text-fill-color: $dark-pink;
+}
+
+.light-blue-scheme-title-bg-color {
+  background-color: $light-blue;
+}
+
+.light-blue-scheme-info-bg-color {
+  color: $light-blue;
+}
+
+.light-blue-scheme-subtitle-bg-color {
+  background-color: #f1f5f8;
+}
+
+.light-blue-scheme-subtitle-color {
+  color: $light-blue;
+}
+
+.light-blue-scheme-title-color {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffffff;
+  -webkit-text-fill-color: $light-blue;
+}
+
+.light-green-scheme-title-bg-color {
+  background-color: $light-green;
+}
+
+.light-green-scheme-info-bg-color {
+  color: $light-green;
+}
+
+.light-green-scheme-subtitle-bg-color {
+  background-color: #f1f5f8;
+}
+
+.light-green-scheme-subtitle-color {
+  color: $light-green;
+}
+
+.light-green-scheme-title-color {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffffff;
+  -webkit-text-fill-color: $light-green;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

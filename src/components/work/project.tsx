@@ -1,57 +1,103 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import { Submenu } from "../menu";
 // import 'src/components/work/index.css'
-import Slider from 'react-slick'
 
-const RightArrow = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.24 14.58"><path fill="none" stroke="#fff" strokeMiterlimit="10" stroke-width=".8" d="M0 7.29h26.68M19.67.28l7.01 7.01-7.01 7"></path></svg>
-)
-
-const LeftArrow = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.24 14.58"><path fill="none" stroke="#fff" strokeMiterlimit="10" stroke-width=".8" d="M27.24 7.29H.57M7.57 14.29l-7-7 7-7.01"></path></svg>
-)
+const SLIDER_LENGTH = 2;
 
 const Project = (props: any) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    speed: 500
-  }
+  const [currentSlide, setCurrentSlide] = useState(0);
 
- return (
-  <div className="work-container">
-    <div className="project-info">
-       <div className={`project-name-container ${props.colorScheme}-scheme-title-bg-color`}>
-          <span className={`name-1 ${props.colorScheme}-scheme-title-color`}>{props.name1}</span><span className={`name-2 ${props.colorScheme}-scheme-title-color`}>{props.name2}</span>
-         <div className="left-arrow">
+  const RightArrow = () => (
+    <svg
+      onClick={() =>
+        props.onClick(
+          props.currentSlide === SLIDER_LENGTH - 1 ? 0 : props.currentSlide + 1
+        )
+      }
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 27.24 14.58"
+    >
+      <path
+        fill="none"
+        stroke="#fff"
+        strokeMiterlimit="10"
+        stroke-width=".8"
+        d="M0 7.29h26.68M19.67.28l7.01 7.01-7.01 7"
+      ></path>
+    </svg>
+  );
 
-          <LeftArrow />
+  const LeftArrow = () => (
+    <svg
+      onClick={() =>
+        props.onClick(
+          props.currentSlide <= 0 ? SLIDER_LENGTH - 1 : props.currentSlide - 1
+        )
+      }
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 27.24 14.58"
+    >
+      <path
+        fill="none"
+        stroke="#fff"
+        strokeMiterlimit="10"
+        stroke-width=".8"
+        d="M27.24 7.29H.57M7.57 14.29l-7-7 7-7.01"
+      ></path>
+    </svg>
+  );
+
+  const gifs = [
+    <img className="slide" alt="slide-1" src={props.gif1} />,
+    <img className="slide" alt="slide-2" src={props.gif2} />,
+    <img className="slide" alt="slide-3" src={props.gif3} />,
+  ];
+
+  return (
+    <div className="work-container">
+      <div className="project-info">
+        <div
+          className={`project-name-container ${props.colorScheme}-scheme-title-bg-color`}
+        >
+          <div className={`name-1 ${props.colorScheme}-scheme-title-color`}>
+            {props.name1}
           </div>
-         <div className="right-arrow">
-
-          <RightArrow />
+          <img className="title-shape" src={`${props.shape}.svg`} />
+          <div className={`name-2 ${props.colorScheme}-scheme-title-color`}>
+            {props.name2}
           </div>
+          <div className="left-arrow">
+            <LeftArrow />
+          </div>
+          <div className="right-arrow">
+            <RightArrow />
+          </div>
+        </div>
+        <div
+          className={`project-desc ${props.colorScheme}-scheme-subtitle-bg-color`}
+        >
+          <div className="project-desc-tech-container">
+            <div
+              className={`project-desc-item tech ${props.colorScheme}-scheme-subtitle-color`}
+            >
+              {props.tech}
+            </div>
+            <Submenu colorScheme={props.colorScheme} />
+          </div>
+          <div
+            className={`project-desc-item desc ${props.colorScheme}-scheme-subtitle-color`}
+          >
+            {props.description}
+          </div>
+        </div>
       </div>
-      <div className="project-desc">
-        {props.description}
+      <div className="project-gifs">
+        <img src={props.gif1} />
+        <img src={props.gif2} />
+        <img src={props.gif3} />
       </div>
     </div>
-    <div className="project-gifs">
-      <Slider {...settings}>
-        <div>
-          <img className="slide" src={props.gif1} />
-        </div>
-        <div>
-          <img className="slide" src={props.gif2} />
-        </div>
-        <div>
-          <img className="slide" src={props.gif3} />
-        </div>
-      </Slider> 
-    </div>
-  </div>
- )
-}
+  );
+};
 
-export default Project
+export default Project;
