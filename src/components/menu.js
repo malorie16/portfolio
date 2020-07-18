@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import '../stylesheets/menu.scss';
 
 export const Submenu = (props) => (
-  <div className={`submenu ${props.colorScheme}-submenu-bg-color`}>
+  <div className={`${props.isWork && 'submenu'} ${props.isHome && 'home'} ${props.colorScheme}-submenu-bg-color`}>
     <div className="link-container">
       <Link to="/" className="links">Home</Link>
     </div>
@@ -40,14 +40,14 @@ const MenuImage = () => (
   </div>
 )
 
-const Menu = () => {
+const Menu = (props) => {
   return (
     <div className="menu">
       <HexagonImage />
       <MenuImage />
-      <Submenu />
+      <Submenu isHome={props.location.pathname === "/"} />
     </div>
   )
 }
 
-export default Menu
+export default withRouter(Menu)

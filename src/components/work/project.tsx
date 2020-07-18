@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Submenu } from "../menu";
+import { withRouter } from "react-router-dom";
 // import 'src/components/work/index.css'
 
 const SLIDER_LENGTH = 2;
@@ -82,7 +83,10 @@ const Project = (props: any) => {
             >
               {props.tech}
             </div>
-            <Submenu colorScheme={props.colorScheme} />
+            <Submenu
+              isWork={props.location.pathname === "/work"}
+              colorScheme={props.colorScheme}
+            />
           </div>
           <div
             className={`project-desc-item desc ${props.colorScheme}-scheme-subtitle-color`}
@@ -100,4 +104,4 @@ const Project = (props: any) => {
   );
 };
 
-export default Project;
+export default withRouter(Project);

@@ -1,8 +1,7 @@
 .menu {
-  position: absolute;
-  width: 40px;
+  display: flex;
+  flex-direction: row-reverse;
   z-index: 1;
-  // right: 40px;
 }
 
 .hex_image {
@@ -11,14 +10,14 @@
   animation: spin 10s linear infinite;
 }
 
-.submenu {
-  display: no ne;
+.menu .home {
+  display: none;
 }
 
 .menu_image {
   position: absolute;
   top: 11px;
-  left: 10px;
+  right: 10px;
   cursor: pointer;
 }
 
@@ -28,16 +27,20 @@
   animation: none;
 }
 
-// .menu:hover .submenu {
-//   display: flex;
-//   transition: all 0.2s ease-in-out;
-//   justify-content: center;
-//   flex-direction: column;
-//   background-color: #2f52a0;
-//   height: 140px;
-//   width: 140px;
-//   z-index: 99;
-// }
+.menu:hover .home {
+  display: flex;
+  transition: all 0.2s ease-in-out;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #2f52a0;
+  height: 140px;
+  width: 140px;
+  z-index: 99;
+}
+
+.menu .submenu:hover {
+  background-color: #2f52a0;
+}
 
 .submenu {
   display: flex;
@@ -58,11 +61,16 @@
   background-color: #05ce78;
 }
 
-.menu:hover .submenu {
+.menu:hover .home {
   transform: scale(1.1);
 }
 
-.menu:hover .submenu div,
+.menu:hover .home div,
+.submenu div {
+  text-align: center;
+  transition: 0.3;
+}
+
 .submenu div {
   text-align: center;
   transition: 0.3;
@@ -72,7 +80,15 @@
 //   transition: 0.3;
 // }
 
-.menu:hover .submenu div a,
+.menu:hover .home div a {
+  color: #2f52a0;
+  font-size: 25px;
+  text-decoration: none;
+  -webkit-text-stroke: 1px #fff;
+  -webkit-text-fill-color: transparent;
+  transition: 0.4s;
+}
+
 .submenu div a {
   color: #2f52a0;
   font-size: 25px;
@@ -82,7 +98,7 @@
   transition: 0.4s;
 }
 
-.menu:hover .submenu div a:hover,
+.menu:hover .home div a:hover,
 .submenu div a:hover {
   -webkit-text-fill-color: #fff;
 }
