@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "portfolio-fc37e"
+    "default": "portfolio-fc37e",
+    "staging": "portfolio-fc37e"
   }
 }

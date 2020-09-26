@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { Submenu } from "../menu";
+import { Submenu } from "/Users/maloriecasimir/Development/portfolio/src/components/menu/index.js";
 import { withRouter } from "react-router-dom";
-// import 'src/components/work/index.css'
+import { isMobile } from "./fixtures";
 
 const SLIDER_LENGTH = 2;
 
 const Project = (props: any) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
   const RightArrow = () => (
     <svg
       onClick={() =>
@@ -95,7 +93,7 @@ const Project = (props: any) => {
           </div>
         </div>
       </div>
-      <div className="project-gifs">
+      <div className={`project-gifs ${isMobile() && "hide"}`}>
         <img src={props.gif1} />
         <img src={props.gif2} />
         <img src={props.gif3} />

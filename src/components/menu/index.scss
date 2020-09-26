@@ -1,16 +1,24 @@
+@font-face {
+  font-family: "Work Sans";
+  src: url("../../fonts/WorkSans-Regular.ttf");
+}
+
 .menu {
   display: flex;
   flex-direction: row-reverse;
   z-index: 1;
+  font-family: "Work Sans";
 }
 
 .hex_image {
   position: absolute;
+  right: 0;
+  top: 0;
   z-index: 0;
   animation: spin 10s linear infinite;
 }
 
-.menu .home {
+.menu .notExpanded {
   display: none;
 }
 
@@ -27,12 +35,21 @@
   animation: none;
 }
 
-.menu:hover .home {
+.menu:hover .notExpanded {
   display: flex;
-  transition: all 0.2s ease-in-out;
   justify-content: center;
   flex-direction: column;
   background-color: #2f52a0;
+  height: 140px;
+  width: 140px;
+  z-index: 99;
+}
+
+.submenu {
+  display: flex;
+  transition: 1s;
+  justify-content: center;
+  flex-direction: column;
   height: 140px;
   width: 140px;
   z-index: 99;
@@ -40,17 +57,8 @@
 
 .menu .submenu:hover {
   background-color: #2f52a0;
-}
-
-.submenu {
-  display: flex;
-  transition: all 0.2s ease-in-out;
-  justify-content: center;
-  flex-direction: column;
-  // background-color: #2f52a0;
-  height: 140px;
-  width: 140px;
-  z-index: 99;
+  z-index: 999 !important;
+  // transition: all 0.2s ease-in-out;
 }
 
 .light-blue-submenu-bg-color {
@@ -61,26 +69,23 @@
   background-color: #05ce78;
 }
 
-.menu:hover .home {
+.menu:hover .notExpanded {
   transform: scale(1.1);
 }
 
-.menu:hover .home div,
+.menu:hover .notExpanded div,
 .submenu div {
   text-align: center;
-  transition: 0.3;
+  transition: transform 300ms;
+  transition: all 0.2s ease-in-out;
 }
 
 .submenu div {
   text-align: center;
   transition: 0.3;
 }
-// .menu:hover .link-container {
-//   text-align: center;
-//   transition: 0.3;
-// }
 
-.menu:hover .home div a {
+.menu:hover .notExpanded div a {
   color: #2f52a0;
   font-size: 25px;
   text-decoration: none;
@@ -98,22 +103,11 @@
   transition: 0.4s;
 }
 
-.menu:hover .home div a:hover,
+.menu:hover .notExpanded div a:hover,
 .submenu div a:hover {
   -webkit-text-fill-color: #fff;
+  transition: 0.4s;
 }
-
-// .menu:hover .submenu .links {
-//   color: #2f52a0;
-//   font-size: 25px;
-//   text-decoration: none;
-//   -webkit-text-stroke: 1px #fff;
-//   transition: 0.4s;
-// }
-
-// .menu:hover .submenu .links {
-//   color: #fff;
-// }
 
 .menu:hover .hex_image {
   z-index: -999999;

@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { Link, withRouter } from 'react-router-dom'
-import '../stylesheets/menu.scss';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import './index.scss';
 
 export const Submenu = (props) => (
-  <div className={`${props.isWork && 'submenu'} ${props.isHome && 'home'} ${props.colorScheme}-submenu-bg-color`}>
+  <div className={`${props.isWork && 'submenu'} ${!props.expanded && 'notExpanded'} ${props.colorScheme}-submenu-bg-color`}>
     <div className="link-container">
       <Link to="/" className="links">Home</Link>
     </div>
@@ -40,14 +40,14 @@ const MenuImage = () => (
   </div>
 )
 
-const Menu = (props) => {
+export const Menu = (props) => {
   return (
     <div className="menu">
       <HexagonImage />
       <MenuImage />
-      <Submenu isHome={props.location.pathname === "/"} />
+      <Submenu expanded={props.expanded} />
     </div>
   )
 }
 
-export default withRouter(Menu)
+export default Menu

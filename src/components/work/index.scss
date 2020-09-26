@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Work Sans";
+  src: url("../../fonts/WorkSans-Regular.ttf");
+}
+
 $light-blue: #07b5ea;
 $dark-pink: #b62058;
 $light-green: #05ce78;
@@ -18,6 +23,7 @@ $light-green: #05ce78;
 
 .project-info {
   display: flex;
+  font-family: "Work Sans";
 }
 
 .project-name-container {
@@ -168,5 +174,30 @@ $light-green: #05ce78;
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 1040px) {
+  .project-info {
+    flex-wrap: wrap;
+  }
+  .name-1,
+  .name-2 {
+    font-size: 50px;
+  }
+  .project-desc {
+    height: auto;
+    width: auto;
+  }
+  .project-name-container {
+    // flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // position: relative;
   }
 }

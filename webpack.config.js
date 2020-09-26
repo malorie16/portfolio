@@ -19,9 +19,9 @@ module.exports = {
           }
         ]
       },
-      { 
-        test: /\.css$/, 
-        use: 'css-loader' 
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.svg$/,
@@ -42,8 +42,8 @@ module.exports = {
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       {
         enforce: "pre",
-          test: /\.js$/,
-          loaders: ["source-map-loader", "babel-loader"]
+        test: /\.js$/,
+        loaders: ["source-map-loader", "babel-loader"]
       }
     ],
   },
