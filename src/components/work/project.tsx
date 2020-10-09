@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Submenu } from "/Users/maloriecasimir/Development/portfolio/src/components/menu/index.js";
+import { Submenu } from "../../components/menu/index.js";
 import { withRouter } from "react-router-dom";
 import { isMobile } from "./fixtures";
 

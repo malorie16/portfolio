@@ -1,10 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import './index.scss'
 import { NameSVG } from './name.js'
 
 const Home = () => {
-    console.log('home')
     return (
         <div id="home-container">
             <div className="title">
